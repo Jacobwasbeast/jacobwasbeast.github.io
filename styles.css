@@ -65,6 +65,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8e1fc', end
 h1 {
   color: red;
 }
+h3 {
+  color: blue;
+}
 body {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c9de96+0,8ab66b+44,398235+100;Green+3D+%233 */
 background: rgb(201,222,150); /* Old browsers */
