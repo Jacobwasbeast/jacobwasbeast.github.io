@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jacobwasbeast</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Jacobwasbeast</h1>
+        <img src="icon.png" alt="Icon">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about" data-aos="fade-up">
+            <h2>About Me</h2>
+            <p>Welcome to my channel! I'm Jacobwasbeast, a software engineer and a passionate gamer. Join me on an exciting adventure as I dive into the world of video games and other things. I program in many languages including Java, Javascript, Python, HTML, CSS, C#, C++, but mainly I use Java.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=UCW51tf9_Uxj9aOHwD7EOmuw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </section>
+        <section id="projects" data-aos="fade-up">
+            <h2>Projects</h2>
+            <p>Here are some current projects:</p>
+            <ul>
+                <li>AOT Minecraft Mod <a href="#" target="_blank" class="project-link">Visit</a></li>
+                <li>Anime Girl Minecraft Mod <a href="#" target="_blank" class="project-link">Visit</a></li>
+                <li>Working with a team to finish multiple games <a href="#" target="_blank" class="project-link">Visit</a></li>
+            </ul>
+        </section>
+        <section id="contact" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p>Connect with me on:</p>
+            <ul>
+                <li><a href="https://github.com/Jacobwasbeast" target="_blank">GitHub</a></li>
+                <li><a href="https://twitter.com/Jacobwasbeast" target="_blank">Twitter</a></li>
+                <li><a href="https://www.twitch.tv/Jacobwasbeast" target="_blank">Twitch</a></li>
+            </ul>
+            <button id="showEmail" class="btn">Show Email</button>
+            <p id="email" style="display: none;">contact@jacobwasbeast.net</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Jacobwasbeast</p>
+    </footer>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('showEmail').addEventListener('click', function() {
+            if (confirm('Are you sure you want to see the email?')) {
+                document.getElementById('email').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
