@@ -6,6 +6,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background: #f4f4f4;
+    overflow-x: hidden;
 }
 
 header {
