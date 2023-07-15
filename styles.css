@@ -17,6 +17,23 @@ header {
     align-items: center;
 }
 
+.header-left,
+.header-center,
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-left {
+    justify-content: flex-start;
+}
+
+.header-right {
+    justify-content: flex-end;
+}
+
 header h1 {
     margin: 0;
 }
@@ -80,8 +97,11 @@ footer {
         flex-direction: column;
     }
 
-    header h1 {
-        margin-bottom: 10px;
+    .header-left,
+    .header-center,
+    .header-right {
+        flex: none;
+        justify-content: center;
     }
 
     nav ul {
