@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Jacobwasbeast</title>
     <link rel="icon" href="icon.png">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="aos.css">
+    <script src="aos.js"></script>
+    <script src="index.js" defer="defer"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
 </head>
-<body>
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     <header>
         <div class="header-left">
-            <h1>Jacobwasbeast</h1>
+            <h1>Jacobwasbeast.net</h1>
         </div>
         <div class="header-center">
-            <img src="icon.png" alt="Icon">
+            <a href="https://jacobwasbeast.net"><img src="icon.png" alt="Icon"></a>
         </div>
         <div class="header-right">
             <nav>
@@ -26,35 +30,169 @@
             </nav>
         </div>
     </header>
-    <main>
-        <section id="about" data-aos="fade-up">
+    <section id="hero">
+        <div class="hero-container">
+          <div class="hero-card">
+            <div class="logo-container">
+              <img src="icon.png" alt="Logo">
+            </div>
+            <div class="hero-content">
+              <h1 id="typewriter-01"></h1>
+              <h2 id="typewriter-02"></h2>
+              <div class="hero-information">
+                <div class="hero-icons">
+                  <div class="hero-icon">
+                    <i class="fas fa-gamepad"></i>
+                    <p>Gamer</p>
+                  </div>
+                  <div class="hero-icon">
+                    <i class="fas fa-laptop-code"></i>
+                    <p>Software Engineer</p>
+                  </div>
+                  <div class="hero-icon">
+                    <i class="fas fa-video"></i>
+                    <p>Content Creator</p>
+                  </div>
+                </div>
+                <div class="cta-buttons">
+                  <a href="#videos" class="cta-button">Watch Latest Videos</a>
+                  <a href="#contact" class="cta-button">Contact Me</a>
+                </div>
+                </div>
+            </div>
+            <div class="company-wrapper">
+                <div class="company-card">
+                    <a href="https://studio.allurevoid.net" target="_blank"><img src="avs-logo.png" alt="Allure Void Studios, Company Logo"></a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+
+      <script>
+        var typed = new Typed('#typewriter-01', {
+          strings: ["Hello!"],
+          typeSpeed: 80,
+          startDelay: 1000,
+          loop: false,
+          showCursor: false
+        });
+      </script>
+
+<script>
+    var typed = new Typed('#typewriter-02', {
+      strings: ["I'm Jacob, or Jacobwasbeast."],
+      typeSpeed: 80,
+      startDelay: 2300,
+      loop: false,
+      showCursor: false
+    });
+  </script>
+      
+      
+      
+    <section id="videos" data-aos="fade-up" class="aos-init aos-animate">
+        <h2>Latest Videos</h2>
+        <p>Check out the latest videos from my Youtube Channel</p>
+        <div class="carousel-outbound-container">
+          <div class="carousel-container">
+            <button class="prev-btn"><i class="fa-solid fa-arrow-left"></i></button>
+            <div class="carousel" id="videoResults">
+              <!-- Videos Auto Insert Here -->
+            </div>
+            <button class="next-btn"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
+      
+      <section id="projects" data-aos="fade-up" class="aos-init aos-animate">
+        <h2>Latest Projects</h2>
+        <p>Check out my latest projects here</p>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project1.png" alt="AOT Minecraft Mod">
+                </div>
+                <div class="project-info">
+                    <h3>AOT Minecraft Mod</h3>
+                    <p>A Minecraft mod inspired by Attack on Titan.</p>
+                    <a href="#" target="_blank" class="project-link">Visit</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project2.png" alt="Anime Girl Minecraft Mod">
+                </div>
+                <div class="project-info">
+                    <h3>Anime Girl Minecraft Mod</h3>
+                    <p>A Minecraft mod featuring anime character models.</p>
+                    <a href="#" target="_blank" class="project-link">Visit</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project3.png" alt="Working with a team to finish multiple games">
+                </div>
+                <div class="project-info">
+                    <h3>Working with a team to finish multiple games</h3>
+                    <p>Collaborating with a team to develop and complete multiple game projects.</p>
+                    <a href="#" target="_blank" class="project-link">Visit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
             <h2>About Me</h2>
-            <p>Welcome to my channel! I'm Jacobwasbeast, a software engineer and a passionate gamer. Join me on an exciting adventure as I dive into the world of video games and other things. I program in many languages including Java, Javascript, Python, HTML, CSS, C#, C++, but mainly I use Java.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=UCW51tf9_Uxj9aOHwD7EOmuw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </section>
-        <section id="projects" data-aos="fade-up">
-            <h2>Projects</h2>
-            <p>Here are some current projects:</p>
-            <ul>
-                <li>AOT Minecraft Mod <a href="#" target="_blank" class="project-link">Visit</a></li>
-                <li>Anime Girl Minecraft Mod <a href="#" target="_blank" class="project-link">Visit</a></li>
-                <li>Working with a team to finish multiple games <a href="#" target="_blank" class="project-link">Visit</a></li>
-            </ul>
-        </section>
-        <section id="contact" data-aos="fade-up">
-            <h2>Contact</h2>
-            <p>Connect with me on:</p>
-            <ul>
-                <li><a href="https://github.com/Jacobwasbeast" target="_blank">GitHub</a></li>
-                <li><a href="https://twitter.com/Jacobwasbeast" target="_blank">Twitter</a></li>
-                <li><a href="https://www.twitch.tv/Jacobwasbeast" target="_blank">Twitch</a></li>
-            </ul>
-            <button id="emailButton" class="btn">Show Email</button>
-            <p id="email" style="display: none;">contact@jacobwasbeast.net</p>
-        </section>
-    </main>
+            <div class="about-content">
+                <img src="icon.png" alt="Profile Picture">
+                <p>Welcome to my channel! I'm Jacobwasbeast, a software engineer and a passionate gamer. Join me on an exciting adventure as I dive into the world of video games and other things. I program in many languages including Java, Javascript, Python, HTML, CSS, C#, C++, but mainly I use Java.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    <section id="contact" data-aos="fade-up" class="aos-init">
+        <div class="support-container">
+            <div class="support-links">
+                <a href="https://github.com/Jacobwasbeast" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://twitter.com/Jacobwasbeast" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+                <a href="https://www.twitch.tv/Jacobwasbeast" target="_blank">
+                    <i class="fab fa-twitch"></i>
+                    <span>Twitch</span>
+                </a>
+            </div>
+            <div class="support-email">
+                <button id="emailButton" class="btn">Show Email</button>
+                <a href="mailto:contact@jacobwasbeast.net"><p id="email" style="display: none;">contact@jacobwasbeast.net</p></a>
+            </div>
+        </div>
+    </section>
+    
+
     <footer>
-        <p>© 2023 Jacobwasbeast</p>
+        <div class="footer-container">
+            <p>© 2023 Jacobwasbeast</p>
+            <div class="social-icons">
+                <a href="https://github.com/Jacobwasbeast" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/Jacobwasbeast" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.twitch.tv/Jacobwasbeast" target="_blank"><i class="fab fa-twitch"></i></a>
+            </div>
+        </div>
     </footer>
+
+
+    <script src="youtube.js"></script>
 </body>
 </html>
