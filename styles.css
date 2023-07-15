@@ -7,15 +7,17 @@ body {
     min-height: 100vh;
     background: #f4f4f4;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 header {
     background-color: #333;
     color: white;
-    padding: 10px;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .header-left,
@@ -57,8 +59,9 @@ nav ul li a {
 }
 
 main {
-    padding: 20px;
+    padding: 20px 0;
     flex: 1 0 auto;
+    box-sizing: border-box;
 }
 
 section {
@@ -116,6 +119,6 @@ footer {
     }
 
     main {
-        padding: 10px;
+        padding: 10px 0;
     }
 }
