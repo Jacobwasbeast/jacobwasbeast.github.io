@@ -42,7 +42,7 @@
                 <li><a href="https://twitter.com/Jacobwasbeast" target="_blank">Twitter</a></li>
                 <li><a href="https://www.twitch.tv/Jacobwasbeast" target="_blank">Twitch</a></li>
             </ul>
-            <button id="showEmail" class="btn">Show Email</button>
+            <button id="copyEmail" class="btn">Copy Email</button>
             <p id="email" style="display: none;">contact@jacobwasbeast.net</p>
         </section>
     </main>
@@ -64,10 +64,21 @@
         });
     </script>
     <script>
-        document.getElementById('showEmail').addEventListener('click', function() {
-            if (confirm('Are you sure you want to see the email?')) {
-                document.getElementById('email').style.display = 'inline';
+        document.getElementById('copyEmail').addEventListener('click', function() {
+            var email = document.getElementById('email');
+            var range = document.createRange();
+            range.selectNode(email);
+            window.getSelection().addRange(range);
+
+            try {
+                var successful = document.execCommand('copy');
+                var msg = successful ? 'successful' : 'unsuccessful';
+                console.log('Copy email command was ' + msg);
+            } catch(err) {
+                console.log('Oops, unable to copy');
             }
+
+            window.getSelection().removeAllRanges();
         });
     </script>
 </body>
