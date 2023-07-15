@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -42,44 +42,12 @@
                 <li><a href="https://twitter.com/Jacobwasbeast" target="_blank">Twitter</a></li>
                 <li><a href="https://www.twitch.tv/Jacobwasbeast" target="_blank">Twitch</a></li>
             </ul>
-            <button id="copyEmail" class="btn">Copy Email</button>
+            <button id="emailButton" class="btn">Show Email</button>
             <p id="email" style="display: none;">contact@jacobwasbeast.net</p>
         </section>
     </main>
     <footer>
         <p>© 2023 Jacobwasbeast</p>
     </footer>
-    <script>
-        AOS.init();
-    </script>
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-    <script>
-        document.getElementById('copyEmail').addEventListener('click', function() {
-            var email = document.getElementById('email');
-            var range = document.createRange();
-            range.selectNode(email);
-            window.getSelection().addRange(range);
-
-            try {
-                var successful = document.execCommand('copy');
-                var msg = successful ? 'successful' : 'unsuccessful';
-                console.log('Copy email command was ' + msg);
-            } catch(err) {
-                console.log('Oops, unable to copy');
-            }
-
-            window.getSelection().removeAllRanges();
-        });
-    </script>
 </body>
 </html>
