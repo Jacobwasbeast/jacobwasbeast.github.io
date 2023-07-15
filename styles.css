@@ -65,7 +65,8 @@ main {
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    padding-top: 60px;
 }
 
 footer {
@@ -94,6 +95,8 @@ footer {
     color: white;
     padding: 5px 10px;
     text-decoration: none;
+    position: relative;
+    left: 20px;
 }
 
 @media (max-width: 600px) {
