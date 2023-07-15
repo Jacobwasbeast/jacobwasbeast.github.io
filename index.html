@@ -43,7 +43,6 @@
                 <li><a href="https://www.twitch.tv/Jacobwasbeast" target="_blank">Twitch</a></li>
             </ul>
             <button id="showEmail" class="btn">Show Email</button>
-            <p id="email" style="display: none;">contact@jacobwasbeast.net</p>
         </section>
     </main>
     <footer>
@@ -66,7 +65,7 @@
     <script>
         document.getElementById('showEmail').addEventListener('click', function() {
             if (confirm('Are you sure you want to see the email?')) {
-                document.getElementById('email').style.display = 'block';
+                document.getElementById('showEmail').textContent = "contact@jacobwasbeast.net";
             }
         });
     </script>
