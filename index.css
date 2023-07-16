@@ -43,8 +43,15 @@ header {
     color: #fff;
 }
 
-.header-right {
-	margin-right: 88px;
+.header-right{
+    margin-right: auto;
+}
+
+@media screen and (max-width: 1250px) {
+    .header-right {
+        margin-right: 88px;
+    }
+    
 }
 
 header h1 {
