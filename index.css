@@ -693,47 +693,75 @@ footer {
 
 
 .external-link-popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 9999;
-  }
-  
-  .popup-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
-    text-align: center;
-  }
-  
-  .popup-buttons {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+.warning-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.warning-icon {
+  font-size: 24px;
+  color: #f7b500;
+  margin-right: 10px;
+}
+
+.warning-text {
+  font-weight: bold;
+  color: #f7b500;
+}
+
+.popup-link-container {
+  margin-bottom: 20px;
+}
+
+.popup-link-container a {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #f7b500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.popup-link-container a:hover {
+  background-color: #d69900;
+}
+
+.popup-buttons {
     margin-top: 20px;
     text-align: center;
+    font-family: 'Tektur', sans-serif;
   }
   
   .popup-buttons button {
     padding: 8px 20px;
     margin-right: 10px;
+    font-family: 'Tektur', sans-serif;
   }
   
-  .popup-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .popup-message {
-    margin-bottom: 20px;
-  }
   
   .popup-buttons button {
     background-color: #333;
@@ -746,4 +774,3 @@ footer {
   .popup-buttons button:hover {
     background-color: #555;
   }
-  

@@ -6,8 +6,11 @@ const externalLinks = document.querySelectorAll('.external-link');
 externalLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault(); 
+    const url = link.getAttribute('href');
+    const popupLink = document.getElementById('popupLink');
+    popupLink.textContent = url;
+    popupLink.setAttribute('href', url);
     externalLinkPopup.style.display = 'block';
-    continueButton.dataset.url = link.getAttribute('href');
   });
 });
 
@@ -15,8 +18,11 @@ cancelButton.addEventListener('click', () => {
   externalLinkPopup.style.display = 'none';
 });
 
-continueButton.addEventListener('click', () => {
-  const url = continueButton.dataset.url;
+continueButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  
+  const popupLink = document.getElementById('popupLink');
+  const url = popupLink.getAttribute('href');
   window.open(url, '_blank');
-  externalLinkPopup.style.display = 'none';
+  externalLinkPopup.style.display = 'none'; 
 });
