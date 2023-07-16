@@ -24,7 +24,7 @@
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="projects.html">All Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -62,7 +62,7 @@
             </div>
             <div class="company-wrapper">
                 <div class="company-card">
-                    <a href="https://studio.allurevoid.net" target="_blank"><img src="avs-logo.png" alt="Allure Void Studios, Company Logo"></a>
+                    <a href="https://studio.allurevoid.net" target="_blank" class="external-link"><img src="avs-logo.png" alt="Allure Void Studios, Company Logo"></a>
                 </div>
             </div>
           </div>
@@ -121,7 +121,7 @@
                             <h3>AOT Minecraft Mod</h3>
                             <p>A Minecraft mod inspired by Attack on Titan.</p>
                             <div class="project-tag in-development">In Development</div>
-                            <a href="#" target="_blank" class="project-link">Visit</a>
+                            <a href="#" target="_blank" class="project-link external-link">Visit</a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -132,7 +132,7 @@
                             <h3>Anime Girl Minecraft Mod</h3>
                             <p>A Minecraft mod featuring anime character models.</p>
                             <div class="project-tag in-development">In Development</div>
-                            <a href="#" target="_blank" class="project-link">Visit</a>
+                            <a href="#" target="_blank" class="project-link external-link">Visit</a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -154,7 +154,7 @@
                             <h3>Void Assistant</h3>
                             <p>A Discord Voice Assistant that can play Music and answer questions you may have.</p>
                             <div class="project-tag in-development">In Development</div>
-                            <a href="https://voidassistant.com" target="_blank" class="project-link">Visit</a>
+                            <a href="https://voidassistant.com" target="_blank" class="project-link external-link">Visit</a>
                         </div>
                     </div>
                 </div>
@@ -163,6 +163,13 @@
             <button class="projects-next-btn"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </section>
+    <section id="more-projects">
+        <div class="container">
+            <p>If you like all of the projects above, you can check out all of my projects here</p>
+            <a href="projects.html" class="btn">View All Projects</a>
+        </div>
+    </section>
+    
     
     
 
@@ -171,7 +178,7 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <img src="icon.png" alt="Profile Picture">
-                <p>Welcome to my channel! I'm Jacobwasbeast, a software engineer and a passionate gamer. Join me on an exciting adventure as I dive into the world of video games and other things. I program in many languages including Java, Javascript, Python, HTML, CSS, C#, C++, but mainly I use Java.</p>
+                <p>Welcome to my website! I'm Jacobwasbeast, a software engineer and a passionate gamer. Join me on an exciting adventure as I dive into the world of video games and other things. I program in many languages including Java, Javascript, Python, HTML, CSS, C#, C++, but mainly I use Java.</p>
             </div>
         </div>
     </section>
@@ -182,15 +189,15 @@
     <section id="contact" data-aos="fade-up" class="aos-init">
         <div class="support-container">
             <div class="support-links">
-                <a href="https://github.com/Jacobwasbeast" target="_blank">
+                <a href="https://github.com/Jacobwasbeast" target="_blank" class="external-link">
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                 </a>
-                <a href="https://twitter.com/Jacobwasbeast" target="_blank">
+                <a href="https://twitter.com/Jacobwasbeast" target="_blank" class="external-link">
                     <i class="fab fa-twitter"></i>
                     <span>Twitter</span>
                 </a>
-                <a href="https://www.twitch.tv/Jacobwasbeast" target="_blank">
+                <a href="https://www.twitch.tv/Jacobwasbeast" target="_blank" class="external-link">
                     <i class="fab fa-twitch"></i>
                     <span>Twitch</span>
                 </a>
@@ -207,14 +214,27 @@
         <div class="footer-container">
             <p>© 2023 Jacobwasbeast</p>
             <div class="social-icons">
-                <a href="https://github.com/Jacobwasbeast" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/Jacobwasbeast" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.twitch.tv/Jacobwasbeast" target="_blank"><i class="fab fa-twitch"></i></a>
-                <h6>Developed by, <a href="https://studio.allurevoid.net/staff/satincake" target="_blank">SatinCake</a></h6>
+                <a href="https://github.com/Jacobwasbeast" target="_blank" class="external-link"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/Jacobwasbeast" target="_blank" class="external-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.twitch.tv/Jacobwasbeast" target="_blank" class="external-link"><i class="fab fa-twitch"></i></a>
+                <h6>Developed by, <a href="https://studio.allurevoid.net/staff/satincake" target="_blank" class="external-link">SatinCake</a></h6>
             </div>
         
         </div>
     </footer>
+
+
+    <div class="external-link-popup" id="externalLinkPopup">
+        <div class="popup-content">
+          <p>You are leaving the site. Are you sure you want to continue?</p>
+          <div class="popup-buttons">
+            <button id="cancelButton">Cancel</button>
+            <button id="continueButton">Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <script src="external.js"></script>
 
 
     <script src="youtube.js"></script>
