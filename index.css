@@ -316,35 +316,50 @@ nav ul li a:hover {
 }
 
 #projects h2 {
-        text-align: center;
-        margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 #projects p {
     text-align: center;
     margin-bottom: 40px;
-  }
+}
 
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 40px;
-    justify-items: center;
+.projects-carousel-wrapper {
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.projects-carousel-viewport {
+	flex: 0 0 auto;
+	width: 100%;
+	overflow: hidden;
+}
+
+.projects-carousel-inner {
+	display: flex;
+	transition: transform 0.4s ease-in-out;
+	margin: 0 -60px 0 30px;
+	padding: 25px;
 }
 
 .project-card {
+    flex: 0 0 calc(33.33% - 40px);
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     padding: 30px;
     text-align: center;
     transition: transform 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    margin-right: 20px;
+    position: relative;
+}
+
+.project-card:last-child {
+    margin-right: 0;
 }
 
 .project-card:hover {
@@ -354,7 +369,7 @@ nav ul li a:hover {
 .project-image {
     width: 200px;
     height: 200px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
 }
 
 .project-image img {
@@ -391,11 +406,107 @@ nav ul li a:hover {
     background-color: #555;
 }
 
+.project-tag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.in-development {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+.completed {
+    background-color: #6fcf97;
+    color: #fff;
+}
+
+.planned {
+    background-color: #65c2c0;
+    color: #fff;
+}
+
+.projects-prev-btn,
+.projects-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.projects-prev-btn:hover,
+.projects-next-btn:hover {
+    opacity: 1;
+}
+
+.projects-prev-btn {
+	left: 30px;
+	border-radius: 10px;
+}
+
+.projects-next-btn {
+	right: 10px;
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 768px) {
-    .projects-container {
-        grid-template-columns: 1fr;
+    .projects-carousel-inner {
+        flex-wrap: wrap;
+    }
+
+    .project-card {
+        margin-bottom: 20px;
+        margin-right: 0;
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    .projects-prev-btn,
+    .projects-next-btn {
+        top: 100%;
+        transform: translateY(-100%);
+    }
+
+    .projects-prev-btn {
+        left: 50%;
+        margin-right: 10px;
+        transform: translateX(-50%);
+    }
+
+    .projects-next-btn {
+        right: 50%;
+        margin-left: 10px;
+        transform: translateX(50%);
     }
 }
+
+@media screen and (max-width: 576px) {
+    .project-card {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
+
+
+
+
+
 
 /* About */
 #about {

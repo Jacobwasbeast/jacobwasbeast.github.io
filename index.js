@@ -35,3 +35,25 @@ emailButton.addEventListener('click', function() {
 });
 
 
+const carouselViewport = document.querySelector('.projects-carousel-viewport');
+const carouselInner = document.querySelector('.projects-carousel-inner');
+const prevProjectsBtn = document.querySelector('.projects-prev-btn');
+const nextProjectsBtn = document.querySelector('.projects-next-btn');
+
+const cardWidth = carouselViewport.offsetWidth / 3;
+let currentIndex = 0;
+
+prevProjectsBtn.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    carouselInner.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+});
+
+nextProjectsBtn.addEventListener('click', () => {
+  const numCards = carouselInner.children.length;
+  if (currentIndex < numCards - 3) {
+    currentIndex++;
+    carouselInner.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+});
