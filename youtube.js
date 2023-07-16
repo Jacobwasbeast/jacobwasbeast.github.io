@@ -8,7 +8,6 @@ $(document).ready(function(){
             key: 'AIzaSyAg-R20JIqcdngqaU4p5IAEzqUoy52a2b4'},
             function (data) {
                 $.each(data.items, function(i, item) {
-                    console.log(item);
                     pid = item.contentDetails.relatedPlaylists.uploads;
                     getVids(pid);
                 })
@@ -25,7 +24,6 @@ $(document).ready(function(){
             function (data) {
                 var output;
                 $.each(data.items, function(i, item) {
-                    console.log(item);
                     videoId = item.snippet.resourceId.videoId;
 
                     output = '<div class="video"><iframe width="560" height="315" src=\"//www.youtube.com/embed/'+videoId+'\"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>'
