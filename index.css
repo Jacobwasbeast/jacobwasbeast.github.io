@@ -735,6 +735,7 @@ footer {
 
 .popup-link-container {
   margin-bottom: 20px;
+  overflow-x: auto;
 }
 
 .popup-link-container a {
@@ -774,3 +775,134 @@ footer {
   .popup-buttons button:hover {
     background-color: #555;
   }
+
+
+
+
+  #cookieConsentBanner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #cookieConsentBanner p {
+    margin: 0;
+  }
+  
+  #cookieSettingsLink {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  #acceptCookiesButton {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    font-family: 'Tektur', sans-serif;
+  }
+  
+  #cookieSettingsPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 5px;
+    width: 400px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #cookieSettingsPopup h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  #cookieSettingsPopup p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  #cookieSettingsPopup input[type="checkbox"] {
+    display: none;
+  }
+  
+  #cookieSettingsPopup label {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  #cookieSettingsPopup .checkmark {
+	position: absolute;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+  
+  #cookieSettingsPopup .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  #cookieSettingsPopup input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
+  }
+  
+  #cookieSettingsPopup .checkmark::after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #333;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  #cookieSettingsPopup label:hover .checkmark {
+    border-color: #3498db;
+  }
+  
+  #cookieSettingsPopup input[type="checkbox"]:checked + .checkmark {
+    background-color: #3498db;
+    border-color: #3498db;
+  }
+  
+  #saveSettingsButton {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	font-size: 16px;
+	font-family: 'Tektur', sans-serif;
+	margin-top: 20px;
+}
+  
+  #saveSettingsButton:hover {
+    background-color: #555;
+  }
+  
