@@ -1,0 +1,27 @@
+/* sitemap.css */
+#page_sitemap {
+    padding: 40px;
+    text-align: center;
+}
+
+.page_sitemap-heading {
+    margin-bottom: 20px;
+}
+
+.page_sitemap-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.page_sitemap-container ul li {
+    margin-bottom: 10px;
+}
+
+.page_sitemap-container ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.page_sitemap-container ul li a:hover {
+    text-decoration: underline;
+}

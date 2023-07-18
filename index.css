@@ -724,6 +724,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    position: relative;
 }
 
 .footer-container {
@@ -743,6 +744,16 @@ footer {
     font-size: 20px;
     margin-right: 10px;
 }
+
+.sitemap-link {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
 
 
 
