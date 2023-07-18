@@ -49,7 +49,7 @@ header {
 
 @media screen and (max-width: 1250px) {
     .header-right {
-        margin-right: 88px;
+        margin-left: auto;
     }
     
 }
@@ -215,9 +215,23 @@ nav ul li a:hover {
     .logo-container {
         display: none;
     }
+
+    .hero-card {
+        display: block !important;
+    }
+
+    .hero-content {
+        flex: 1;
+        font-family: 'Tektur', cursive;
+        font-size: 28px;
+    }
     
 }
   
+
+
+
+/* Video Section */
 
 .carousel-outbound-container {
 	background-color: #f4f4f4;
@@ -268,23 +282,22 @@ nav ul li a:hover {
 }
 
 
-/* Video Section */
 #videos {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 40px;
-  }
-  
-  #videos h2 {
+}
+
+#videos h2 {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  #videos p {
+}
+
+#videos p {
     text-align: center;
     margin-bottom: 40px;
-  }
-  
-  .video-container {
+}
+
+.video-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
@@ -295,17 +308,55 @@ nav ul li a:hover {
     padding: 20px;
     text-align: center;
   }
-  
-  .video-card iframe {
+
+.video-card iframe {
     width: 100%;
     height: 200px;
     border: none;
     margin-bottom: 10px;
-  }
-  
-  .video-card h3 {
+}
+
+.video-card h3 {
     margin: 0;
-  }
+}
+
+.embed-container {
+	padding-bottom: 56.25%;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .video-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    
+    .video-card {
+        width: 100%;
+    }
+    
+    .navigation-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+}
+
   
 
 /* Projects */
@@ -469,12 +520,14 @@ nav ul li a:hover {
 @media screen and (max-width: 768px) {
     .projects-carousel-inner {
         flex-wrap: wrap;
+        margin: inherit;
     }
 
     .project-card {
-        margin-bottom: 20px;
+        margin-bottom: 36px;
         margin-right: 0;
         flex: 0 0 calc(50% - 20px);
+        height: auto;
     }
 
     .projects-prev-btn,
@@ -493,6 +546,11 @@ nav ul li a:hover {
         right: 50%;
         margin-left: 10px;
         transform: translateX(50%);
+    }
+
+    .project-info {
+        flex-grow: 1;
+        margin-bottom: 50px;
     }
 }
 

@@ -26,7 +26,7 @@ $(document).ready(function(){
                 $.each(data.items, function(i, item) {
                     videoId = item.snippet.resourceId.videoId;
 
-                    output = '<div class="video"><iframe width="560" height="315" src=\"//www.youtube.com/embed/'+videoId+'\"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>'
+                    output = '<div class="video embed-container"><iframe width="560" height="315" src=\"//www.youtube.com/embed/'+videoId+'\"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>'
                 
                     $('#videoResults').append(output);
                 })
