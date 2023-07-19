@@ -8,6 +8,7 @@
     
     <meta name="keywords" content="Developer, Minecraft Mods, Portfolio">
     <meta name="robots" content="index,no-follow">
+    <meta http-equiv='Content-Security-Policy' content="base-uri 'self'; connect-src 'self' https://www.googleapis.com; default-src 'self'; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; frame-src 'self' https://www.youtube.com http://www.youtube.com; img-src 'self'; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'report-sample' 'self' https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js https://code.jquery.com/jquery-3.7.0.min.js; style-src 'report-sample' 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com; worker-src 'none';">
     
     <link rel="canonical" href="https://jacobwasbeast.net">
         
@@ -37,9 +38,9 @@
         <div class="header-right">
             <nav>
                 <ul>
-                    <li><a href="#about" aria-label="Header About Link">About</a></li>
-                    <li><a href="projects.html" aria-label="Header Projects Link">All Projects</a></li>
-                    <li><a href="#contact" aria-label="Header Contact Link">Contact</a></li>
+                    <li><a href="./index.html#about" aria-label="Header About Link">About</a></li>
+                    <li><a href="./projects.html" aria-label="Header Projects Link">All Projects</a></li>
+                    <li><a href="./index.html#contact" aria-label="Header Contact Link">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -49,10 +50,10 @@
         <h2 class="page_sitemap-heading">Sitemap</h2>
         <div class="page_sitemap-container">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="projects.html">All Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#about">About</a></li>
+                <li><a href="./projects.html">All Projects</a></li>
+                <li><a href="./index.html#contact">Contact</a></li>
             </ul>
         </div>
     </section>
@@ -88,17 +89,8 @@
         </div>
     </div>
 
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Jacobwasbeast",
-            "url": "https://jacobwasbeast.net",
-            "logo": "https://jacobwasbeast.net/icon.webp"
-        }
-    </script>
-
-    <script src="external.js"></script>
+    <script src="./schema.js" type="application/ld+json"></script>
+    <script src="./external.js"></script>
 
 </body>
 </html>
