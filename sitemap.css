@@ -1,29 +1,38 @@
+:root {
+  --outer-space: #464646ff;
+  --jet: #333333ff;
+  --turkey-red: #ad0000ff;
+  --caribbean-current: #29605fff;
+  --dartmouth-green: #226339ff;
+  --light-red: #ff6b6bff;
+}
+
 /* sitemap.css */
 #page_sitemap {
-	padding: 40px;
-	text-align: center;
-	margin-bottom: 530px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 530px;
 }
 
 .page_sitemap-heading {
-	margin-bottom: 20px;
-	font-size: xxx-large;
+  margin-bottom: 20px;
+  font-size: xxx-large;
 }
 
 .page_sitemap-container ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .page_sitemap-container ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .page_sitemap-container ul li a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .page_sitemap-container ul li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
