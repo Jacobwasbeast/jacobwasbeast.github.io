@@ -57,7 +57,7 @@
 }
 
 .page_project-description {
-    color: #777;
+    color: #575757;
     margin-bottom: 20px;
 }
 
@@ -95,17 +95,17 @@
 }
 
 .page_in-development {
-    background-color: #ff6b6b;
-    color: #fff;
+    background-color: #AD0000;
+    color: #FAFAFA;
 }
 
 .page_completed {
-    background-color: #6fcf97;
+    background-color: #226339;
     color: #fff;
 }
 
 .page_planned {
-    background-color: #65c2c0;
+    background-color: #29605F;
     color: #fff;
 }
 
