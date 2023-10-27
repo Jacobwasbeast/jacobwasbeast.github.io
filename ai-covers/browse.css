@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap");
+
+:root {
+  --outer-space: #464646ff;
+  --jet: #333333ff;
+  --turkey-red: #ad0000ff;
+  --caribbean-current: #29605fff;
+  --dartmouth-green: #226339ff;
+  --light-red: #ff6b6bff;
+}
+
+/* Reset and general styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Tektur", sans-serif;
+  background: #f4f4f4;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-left,
+.header-center,
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.header-left {
+  justify-content: flex-start;
+  margin-left: 10px;
+  font-family: "Tektur", cursive;
+  color: #fff;
+}
+
+.header-right {
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1250px) {
+  .header-right {
+    margin-left: auto;
+  }
+}
+
+header h1 {
+  margin: 0;
+  font-family: "Tektur", cursive;
+  color: #fff;
+}
+
+header img {
+  height: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Tektur", cursive;
+  font-size: 20px;
+  margin: 0 10px;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  text-decoration: underline solid #f4f4f4 2px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .header-left {
+    display: none;
+  }
+}
+
+
+
+
+.pagination {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    page-break-inside: avoid;
+  }
+  
+  
+  .pagination ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pagination li {
+    margin: 0 2px;
+  }
+  
+  .pagination button {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #f0f0f0;
+    background-color: #333;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: auto;
+    font-family: "Tektur", sans-serif;
+  }
+  
+  .page-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  
+  .pagination button:hover {
+    background-color: #444;
+    color: #bacdd8;
+  }
+  
+
+  .card {
+    background-color: white;
+    border: 1px solid #bacdd8;
+    padding: 8px;
+    border-radius: 3px;
+    position: relative;
+    min-width: 435px;
+  }
+
+  .card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .details-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+  }
+  
+  .thumbnail-div {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
+  .thumbnail {
+    width: 100px;
+    height: auto;
+  }
+  
+  
+  
+  
+  .sorting-features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .sorting-features select {
+    margin-left: 10px;
+  }
+  
+    
+    
+    
+    
+    
+  
+  
+  .download-button {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+  }
+  
+  .card-link {
+    display: block;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .card-info {
+    margin-bottom: 5px;
+  }
+  
+  .card-link:hover {
+    text-decoration: underline;
+  }
+  
+
+  
+  .sortByModel {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--jet);
+    color: #f4f4f4;
+    font-family: "Tektur", sans-serif;
+  }
+  
+  .sortByModel option {
+    padding: 10px;
+    font-family: "Tektur", sans-serif;
+  }
+  
+  .sortByModel option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .sortByModel option:checked {
+    font-weight: bold;
+    color: var(--outer-space);
+  }
+
+
+  .sortByOrder {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--jet);
+    color: #f4f4f4;
+    font-family: "Tektur", sans-serif;
+  }
+  
+  .sortByOrder option {
+    padding: 10px;
+    font-family: "Tektur", sans-serif;
+  }
+  
+  .sortByOrder option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .sortByOrder option:checked {
+    font-weight: bold;
+    color: var(--outer-space);
+  }
+

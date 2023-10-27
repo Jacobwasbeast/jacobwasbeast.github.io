@@ -108,6 +108,11 @@
   color: #fafafa;
 }
 
+.page_canceled {
+  background-color: #e91111;
+  color: #fafafa;
+}
+
 .page_completed {
   background-color: #226339;
   color: #fff;

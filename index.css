@@ -467,6 +467,11 @@ nav ul li a:hover {
   color: #fafafa;
 }
 
+.canceled {
+  background-color: #e91111;
+  color: #fafafa;
+}
+
 .completed {
   background-color: #226339;
   color: #fff;

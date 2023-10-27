@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacobwasbeast</title>
+  <meta name="description" content="Jacobwasbeast's Portolfio Website | AI Cover Browse">
+
+  <meta name="keywords" content="Developer, Minecraft Mods, Portfolio">
+
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="canonical" href="https://jacobwasbeast.net">
+
+  <link rel="icon" href="../icon.webp">
+  <link rel="stylesheet" type="text/css" href="./browse.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous"></script>
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="header-left">
+      <h1>Jacobwasbeast.net</h1>
+    </div>
+    <div class="header-center">
+      <a href="https://jacobwasbeast.net"><img src="../icon.webp" alt="Icon"></a>
+    </div>
+    <div class="header-right">
+      <nav>
+        <ul>
+          <li><a href="../index.html#about" aria-label="Header About Link">About</a></li>
+          <li><a href="../projects.html" aria-label="Header Projects Link">All Projects</a></li>
+          <li><a href="../index.html#contact" aria-label="Header Contact Link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <nav class="pagination">
+    <h3>Sort by:</h3>
+    <div class="sorting-features">
+
+    <select class="sortByModel" id="modelDropdown" onchange="fetchData(this.value, document.getElementById('sortOrderDropdown').value)">
+      <option value="None">None</option>
+      <option value="Collin">Model: Collin</option>
+      <option value="Jacob_V6">Model: Jacob_V6</option>
+      <option value="Dustin">Model: Dustin</option>
+    </select>
+
+    <select class="sortOrder sortByOrder" id="sortOrderDropdown" onchange="fetchData(document.getElementById('modelDropdown').value, this.value)">
+      <option value="Ascending">Order: Ascending</option>
+      <option value="Descending">Order: Descending</option>
+    </select>
+
+    </div>
+    <div id="browse" class="card-container"></div>
+    <div class="pageButtons">
+    <button id="previousPageButton">Previous Page</button>
+    <button id="nextPageButton">Next Page</button>
+  </div>
+  </nav>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@13.0.0"></script>
+  <script>
+    const { Client, Databases, Query, Account } = Appwrite;
+    const client = new Client();
+    
+    client
+      .setEndpoint('https://cloud.appwrite.io/v1')
+      .setProject('652373e5a65fc9cad052');
+    const databases = new Databases(client);
+    const account = new Account(client);
+    
+    let currentPage = 1;
+    const itemsPerPage = 10;
+    let totalItems = 0;
+    
+    async function fetchData(model = 'None', sortOrder = 'Ascending') {
+      try {
+        const offset = (currentPage - 1) * itemsPerPage;
+        let query = [Query.offset(offset), Query.limit(itemsPerPage)];
+    
+        if (model !== 'None') {
+          query.push(Query.search('model', model));
+        }
+    
+        if (sortOrder === 'Ascending') {
+          query.push(Query.orderAsc('$createdAt'));
+        } else if (sortOrder === 'Descending') {
+          query.push(Query.orderDesc('$createdAt'));
+        }
+    
+        const response = await databases.listDocuments(
+          '6523765b11460cf0952d',
+          'ai-covers',
+          query
+        );
+        console.log(response);
+        totalItems = response.total;
+        paginate(response.documents);
+      } catch (error) {
+        console.log(error);
+        if (error.message.includes('Unauthorized')) {
+          window.location.href = '../login.html';
+        }
+      }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    let audioQueue = [];
+
+    function paginate(items) {
+      let startIndex = 0;
+      let endIndex = itemsPerPage;
+    
+      if (currentPage > 1) {
+        startIndex = (currentPage - 1) * itemsPerPage;
+        endIndex = currentPage * itemsPerPage;
+      }
+    
+      const pageItems = items.slice(startIndex, endIndex);
+    
+      const cardContainer = document.getElementById('browse');
+      cardContainer.innerHTML = '';
+    
+      items.forEach((item) => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+    
+    
+        const title = document.createElement('div');
+        title.classList.add('card-title');
+        title.textContent = item.title;
+        card.appendChild(title);
+    
+        const cardContent = document.createElement('div');
+        cardContent.classList.add('card-content');
+        card.appendChild(cardContent);
+    
+        const detailsDiv = document.createElement('div');
+        detailsDiv.classList.add('details-div');
+        cardContent.appendChild(detailsDiv);
+    
+        const details = document.createElement('div');
+        details.classList.add('card__details');
+        detailsDiv.appendChild(details);
+    
+        const model = document.createElement('div');
+        model.classList.add('card-info');
+        model.textContent = 'Model: ' + item.model;
+        details.appendChild(model);
+    
+        const artist = document.createElement('div');
+        artist.classList.add('card-info');
+        artist.textContent = 'Artist: ' + item.artist;
+        details.appendChild(artist);
+    
+        const pitchOffset = document.createElement('div');
+        pitchOffset.classList.add('card-info');
+        pitchOffset.textContent = 'Pitch Offset: ' + item.pitchOffset;
+        details.appendChild(pitchOffset);
+    
+        const thumbnailDiv = document.createElement('div');
+        thumbnailDiv.classList.add('thumbnail-div');
+    
+        if (item.youtube_id) {
+          const thumbnail = document.createElement('img');
+          thumbnail.src = `https://img.youtube.com/vi/${item.youtube_id}/hqdefault.jpg`;
+          thumbnail.classList.add('thumbnail');
+          thumbnailDiv.appendChild(thumbnail);
+        }
+    
+        cardContent.appendChild(thumbnailDiv);
+    
+        const linkContainer = document.createElement('div');
+        linkContainer.classList.add('download-button');
+    
+        const link = document.createElement('a');
+        link.classList.add('card-link');
+        link.href = item['driveLink'];
+    
+        const icon = document.createElement('i');
+        icon.classList.add('fas', 'fa-download');
+    
+        link.appendChild(icon);
+        link.appendChild(document.createTextNode(' Download'));
+    
+        linkContainer.appendChild(link);
+        card.appendChild(linkContainer);
+    
+        const audio = document.createElement('audio');
+        audio.controls = true;
+        audio.autoplay = false;
+    
+        const source = document.createElement('source');
+        source.src = item['driveLink'];
+        source.type = 'audio/mp3';
+    
+        audio.appendChild(source);
+    
+        audio.addEventListener('ended', function() {
+          const index = Array.prototype.indexOf.call(audioQueue, this);
+          if (index < audioQueue.length - 1) {
+            audioQueue[index + 1].play();
+          } else {
+            currentPage++;
+            fetchData(document.getElementById('modelDropdown').value, document.getElementById('sortOrderDropdown').value);
+          }
+        });
+    
+        audioQueue.push(audio);
+    
+        card.appendChild(audio);
+    
+        cardContainer.appendChild(card);
+      });
+    
+      if (currentPage === 1) {
+        previousPageButton.disabled = true;
+      } else {
+        previousPageButton.disabled = false;
+      }
+    }
+
+    const nextPageButton = document.getElementById('nextPageButton');
+    nextPageButton.addEventListener('click', () => {
+      currentPage++;
+      fetchData(document.getElementById('modelDropdown').value, document.getElementById('sortOrderDropdown').value);
+    });
+    
+    const previousPageButton = document.getElementById('previousPageButton');
+    previousPageButton.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        fetchData(document.getElementById('modelDropdown').value, document.getElementById('sortOrderDropdown').value);
+      }
+    });
+    
+    
+    window.addEventListener('DOMContentLoaded', () => {
+      fetchData(document.getElementById('modelDropdown').value, document.getElementById('sortOrderDropdown').value);
+    });
+    
+  </script>
+
+</body>
+
+</html>
