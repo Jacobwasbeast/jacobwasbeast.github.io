@@ -211,7 +211,7 @@
         audio.autoplay = false;
     
         const source = document.createElement('source');
-        source.src = item['driveLink'];
+        source.src = "https://cloud.appwrite.io/v1/storage/buckets/65504849d72e620138c4/files/" + item['fileId'] + "/view?project=652373e5a65fc9cad052";
         source.type = 'audio/mp3';
     
         audio.appendChild(source);
