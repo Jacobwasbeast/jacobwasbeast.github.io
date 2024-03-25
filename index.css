@@ -626,6 +626,20 @@ nav ul li a:hover {
   line-height: 1.5;
 }
 
+.about-content .skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.about-content .skills img {
+  width: 60px;
+  height: 60px;
+  border-radius: unset;
+}
+
 .about-content .social-icons {
   margin-top: 20px;
 }
@@ -641,6 +655,7 @@ nav ul li a:hover {
 .about-content .social-icons a:hover {
   color: #ff6b6b;
 }
+
 
 /* Contact */
 #contact {
