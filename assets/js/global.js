@@ -1,0 +1,1 @@
+document.getElementById("copyrightYear").innerHTML = new Date().getFullYear(); // Changes the copyright year to the current year

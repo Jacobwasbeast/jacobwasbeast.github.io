@@ -57,3 +57,4 @@ nextProjectsBtn.addEventListener('click', () => {
     carouselInner.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
   }
 });
+
