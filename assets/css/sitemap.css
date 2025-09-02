@@ -1,11 +1,19 @@
 /* Sitemap - Monochrome Theme */
+:root {
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 0.75rem;
+  --border-radius-lg: 1rem;
+  --border-radius-xl: 1.5rem;
+  --border-radius-2xl: 2rem;
+}
+
 #page_sitemap {
   background: linear-gradient(135deg, #121212 0%, #1C1C1C 50%, #2E2E2E 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 5rem 2rem;
   margin: 2rem;
-  border-radius: 20px;
+  border-radius: var(--border-radius-xl);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(77, 208, 225, 0.1);
   min-height: 60vh;
@@ -43,7 +51,7 @@
   background: linear-gradient(135deg, #1C1C1C 0%, #2E2E2E 100%);
   color: #F5F5F5;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: var(--border-radius-lg);
   font-weight: 500;
   font-size: 1.1rem;
   transition: all 0.3s ease;
@@ -85,7 +93,7 @@
   #page_sitemap {
     margin: 1rem;
     padding: 3rem 1rem;
-    border-radius: 16px;
+    border-radius: var(--border-radius-xl);
   }
 
   .page_sitemap-heading {
@@ -112,7 +120,7 @@
   #page_sitemap {
     margin: 0.5rem;
     padding: 2rem 0.75rem;
-    border-radius: 12px;
+    border-radius: var(--border-radius-lg);
   }
 
   .page_sitemap-heading {

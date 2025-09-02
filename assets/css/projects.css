@@ -227,7 +227,7 @@
   #page_projects {
     margin: 1rem;
     padding: 3rem 1rem;
-    border-radius: 16px;
+    border-radius: var(--border-radius-xl);
   }
 
   .page_projects-heading {
@@ -275,7 +275,7 @@
   #page_projects {
     margin: 0.5rem;
     padding: 2rem 0.75rem;
-    border-radius: 12px;
+    border-radius: var(--border-radius-lg);
   }
 
   .page_projects-heading {
@@ -343,7 +343,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 2.5rem;
-  border-radius: 20px;
+  border-radius: var(--border-radius-xl);
   width: 450px;
   max-width: 90vw;
   text-align: center;
@@ -390,7 +390,7 @@
   margin-bottom: 2rem;
   padding: 1rem;
   background: rgba(46, 46, 46, 0.5);
-  border-radius: 12px;
+  border-radius: var(--border-radius-lg);
   border: 1px solid rgba(245, 245, 245, 0.1);
 }
 
@@ -423,7 +423,7 @@
 .popup-actions button {
   padding: 0.875rem 1.5rem;
   border: none;
-  border-radius: 12px;
+  border-radius: var(--border-radius-lg);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -482,7 +482,7 @@
   .popup-content {
     width: 90vw;
     padding: 2rem 1.5rem;
-    border-radius: 16px;
+    border-radius: var(--border-radius-xl);
   }
 
   .popup-icon {
@@ -523,7 +523,7 @@
   .popup-content {
     width: 95vw;
     padding: 1.5rem 1rem;
-    border-radius: 12px;
+    border-radius: var(--border-radius-lg);
   }
 
   .popup-header {

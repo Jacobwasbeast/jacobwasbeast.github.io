@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
 :root {
   /* Refined Beast Theme - Core Colors */
@@ -51,6 +51,17 @@
   --border-radius-lg: 1rem;
   --border-radius-xl: 1.5rem;
   --border-radius-2xl: 2rem;
+
+  /* Spacing System */
+  --spacing-xs: 0.25rem;    /* 4px */
+  --spacing-sm: 0.5rem;     /* 8px */
+  --spacing-md: 0.75rem;    /* 12px */
+  --spacing-lg: 1rem;       /* 16px */
+  --spacing-xl: 1.5rem;     /* 24px */
+  --spacing-2xl: 2rem;      /* 32px */
+  --spacing-3xl: 3rem;      /* 48px */
+  --spacing-4xl: 4rem;      /* 64px */
+  --spacing-5xl: 5rem;      /* 80px */
 }
 
 /* Reset and general styles */
@@ -265,7 +276,7 @@ nav ul li a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
   font-size: 0.8rem;
   color: rgba(0, 153, 255, 0.1);
   white-space: pre;
@@ -2022,12 +2033,12 @@ body.beast-mode .name-highlight {
 
 .support-email p {
   margin-top: 1rem;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
   color: #4DD0E1;
   font-weight: 500;
   padding: 1rem 1.5rem;
   background: linear-gradient(135deg, #1C1C1C 0%, #2E2E2E 100%);
-  border-radius: 12px;
+  border-radius: var(--border-radius-lg);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 0 12px rgba(77, 208, 225, 0.1);
   border: 1px solid rgba(77, 208, 225, 0.2);
   text-align: center;
@@ -2144,7 +2155,7 @@ footer {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 2.5rem;
-  border-radius: 20px;
+  border-radius: var(--border-radius-xl);
   width: 450px;
   max-width: 90vw;
   text-align: center;
@@ -2191,7 +2202,7 @@ footer {
   margin-bottom: 2rem;
   padding: 1rem;
   background: rgba(46, 46, 46, 0.5);
-  border-radius: 12px;
+  border-radius: var(--border-radius-lg);
   border: 1px solid rgba(245, 245, 245, 0.1);
 }
 
@@ -2210,7 +2221,7 @@ footer {
 .link-text {
   color: #F5F5F5;
   font-size: 0.9rem;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
   word-break: break-all;
   text-align: left;
 }
@@ -2224,7 +2235,7 @@ footer {
 .popup-actions button {
   padding: 0.875rem 1.5rem;
   border: none;
-  border-radius: 12px;
+  border-radius: var(--border-radius-lg);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -2283,7 +2294,7 @@ footer {
   .popup-content {
     width: 90vw;
     padding: 2rem 1.5rem;
-    border-radius: 16px;
+    border-radius: var(--border-radius-xl);
   }
 
   .popup-icon {
@@ -2324,7 +2335,7 @@ footer {
   .popup-content {
     width: 95vw;
     padding: 1.5rem 1rem;
-    border-radius: 12px;
+    border-radius: var(--border-radius-lg);
   }
 
   .popup-header {
