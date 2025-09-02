@@ -5,11 +5,10 @@ const externalLinks = document.querySelectorAll('.external-link');
 
 externalLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     const url = link.getAttribute('href');
     const popupLink = document.getElementById('popupLink');
     popupLink.textContent = url;
-    popupLink.setAttribute('href', url);
     externalLinkPopup.style.display = 'block';
   });
 });
@@ -20,9 +19,9 @@ cancelButton.addEventListener('click', () => {
 
 continueButton.addEventListener('click', (event) => {
   event.preventDefault();
-  
+
   const popupLink = document.getElementById('popupLink');
-  const url = popupLink.getAttribute('href');
+  const url = popupLink.textContent;
   window.open(url, '_blank');
-  externalLinkPopup.style.display = 'none'; 
+  externalLinkPopup.style.display = 'none';
 });

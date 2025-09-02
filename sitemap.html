@@ -34,7 +34,7 @@
 <body>
     <header>
         <div class="header-left">
-            <h1>Jacobwasbeast.net</h1>
+            <h1>JACOB<span class="header-accent">WASBEAST</span></h1>
         </div>
         <div class="header-center">
             <a href="https://jacobwasbeast.net"><img src="assets/img/icon.webp" alt="Icon"></a>
@@ -54,10 +54,46 @@
         <h2 class="page_sitemap-heading">Sitemap</h2>
         <div class="page_sitemap-container">
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./index.html#about">About</a></li>
-                <li><a href="./projects.html">All Projects</a></li>
-                <li><a href="./index.html#contact">Contact</a></li>
+                <li><a href="./index.html">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a></li>
+                <li><a href="./index.html#about">
+                    <i class="fas fa-user"></i>
+                    About Me
+                </a></li>
+                <li><a href="./projects.html">
+                    <i class="fas fa-code"></i>
+                    All Projects
+                </a></li>
+                <li><a href="./index.html#contact">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a></li>
+                <li><a href="./index.html#videos">
+                    <i class="fas fa-video"></i>
+                    Latest Videos
+                </a></li>
+                <li><a href="https://github.com/Jacobwasbeast" target="_blank" class="external-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a></li>
+                <li><a href="https://x.com/Jacobwasbeast" target="_blank" class="external-link">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    X (Twitter)
+                </a></li>
+                <li><a href="https://www.twitch.tv/Jacobwasbeast" target="_blank" class="external-link">
+                    <i class="fab fa-twitch"></i>
+                    Twitch
+                </a></li>
+                <li><a href="https://www.youtube.com/@Jacobwasbeast" target="_blank" class="external-link">
+                    <i class="fab fa-youtube"></i>
+                    YouTube
+                </a></li>
+                <li><a href="https://satincake.com" target="_blank" class="external-link">
+                    <i class="fas fa-external-link-alt"></i>
+                    SatinCake (Developer)
+                </a></li>
             </ul>
         </div>
     </section>
@@ -83,17 +119,28 @@
 
     <div class="external-link-popup" id="externalLinkPopup">
         <div class="popup-content">
-            <div class="warning-container">
-                <span class="warning-icon">!</span>
-                <p class="warning-text">Warning: External Link</p>
+            <div class="popup-header">
+                <div class="popup-icon">
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
+                <h3 class="popup-title">External Link</h3>
+                <p class="popup-subtitle">You're about to leave jacobwasbeast.net</p>
             </div>
-            <div class="popup-link-container">
-                <a id="popupLink" href="#" target="_blank"></a>
+            <div class="popup-link-display">
+                <div class="link-preview">
+                    <i class="fas fa-link"></i>
+                    <span id="popupLink" class="link-text"></span>
+                </div>
             </div>
-            <p>You are leaving this site. Are you sure you want to continue?</p>
-            <div class="popup-buttons">
-                <button id="cancelButton">Cancel</button>
-                <button id="continueButton">Continue</button>
+            <div class="popup-actions">
+                <button id="cancelButton" class="btn-secondary" aria-label="Cancel Button">
+                    <i class="fas fa-times"></i>
+                    Stay Here
+                </button>
+                <button id="continueButton" class="btn-primary" aria-label="Continue Button">
+                    <i class="fas fa-arrow-right"></i>
+                    Continue
+                </button>
             </div>
         </div>
     </div>

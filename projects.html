@@ -36,7 +36,7 @@
 <body>
   <header>
     <div class="header-left">
-      <h1>Jacobwasbeast.net</h1>
+      <h1>JACOB<span class="header-accent">WASBEAST</span></h1>
     </div>
     <div class="header-center">
       <a href="https://jacobwasbeast.net"><img src="assets/img/icon.webp" alt="Icon"></a>
@@ -136,6 +136,34 @@
       <a href="sitemap.html" class="sitemap-link">Sitemap</a>
     </div>
   </footer>
+
+  <div class="external-link-popup" id="externalLinkPopup">
+    <div class="popup-content">
+      <div class="popup-header">
+        <div class="popup-icon">
+          <i class="fas fa-external-link-alt"></i>
+        </div>
+        <h3 class="popup-title">External Link</h3>
+        <p class="popup-subtitle">You're about to leave jacobwasbeast.net</p>
+      </div>
+      <div class="popup-link-display">
+        <div class="link-preview">
+          <i class="fas fa-link"></i>
+          <span id="popupLink" class="link-text"></span>
+        </div>
+      </div>
+      <div class="popup-actions">
+        <button id="cancelButton" class="btn-secondary" aria-label="Cancel Button">
+          <i class="fas fa-times"></i>
+          Stay Here
+        </button>
+        <button id="continueButton" class="btn-primary" aria-label="Continue Button">
+          <i class="fas fa-arrow-right"></i>
+          Continue
+        </button>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/external.js"></script>
   <script src="assets/js/global.js"></script>

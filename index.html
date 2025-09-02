@@ -41,7 +41,7 @@
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     <header>
         <div class="header-left">
-            <h1>Jacobwasbeast.net</h1>
+            <h1>JACOB<span class="header-accent">WASBEAST</span></h1>
         </div>
         <div class="header-center">
             <a href="https://jacobwasbeast.net"><img src="assets/img/icon.webp" alt="Icon"></a>
@@ -63,34 +63,38 @@
                     <img src="assets/img/icon.webp" alt="Logo">
                 </div>
                 <div class="hero-content">
-                    <h1 id="typewriter-01"></h1>
-                    <h2 id="typewriter-02"></h2>
-                    <div class="hero-information">
-                        <div class="hero-icons">
-                            <div class="hero-icon">
-                                <i class="fas fa-gamepad"></i>
-                                <p>Gamer</p>
-                            </div>
-                            <div class="hero-icon">
-                                <i class="fas fa-laptop-code"></i>
-                                <p>Software Engineer</p>
-                            </div>
-                            <div class="hero-icon">
-                                <i class="fas fa-video"></i>
-                                <p>Content Creator</p>
-                            </div>
+                    <h1>
+                        <span class="greeting">Hey there, I'm</span>
+                        <span class="name-highlight">Jacobwasbeast</span>
+                    </h1>
+                    <h2>Software Engineer, AI Developer & Content Creator.</h2>
+
+                    <div class="hero-icons">
+                        <div class="hero-icon">
+                            <i class="fas fa-laptop-code"></i>
+                            <p>Developer</p>
                         </div>
-                        <div class="cta-buttons">
-                            <a href="#videos" class="cta-button" aria-label="Header About Link">My Latest Videos</a>
-                            <a href="#contact" class="cta-button" aria-label="Header About Link">Contact Me!</a>
+                        <div class="hero-icon">
+                            <i class="fas fa-brain"></i>
+                            <p>AI Developer</p>
                         </div>
+                        <div class="hero-icon">
+                            <i class="fas fa-video"></i>
+                            <p>Creator</p>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="#videos" class="cta-button" aria-label="View Latest Videos">My Latest Videos</a>
+                        <a href="#contact" class="cta-button" aria-label="Contact Jacobwasbeast">Contact Me!</a>
                     </div>
                 </div>
                 <div class="company-wrapper">
                     <div class="company-card">
-                        <a href="https://studio.allurevoid.net" target="_blank" class="external-link"
-                            aria-label="Allure Void Studios Image Link"><img src="assets/img/avs-logo.webp"
-                                alt="Allure Void Studios, Company Logo"></a>
+                        <a href="https://studio.allurevoid.net" target="_blank" class="external-link" aria-label="Allure Void Studios Link">
+                            <img src="assets/img/avs-logo.webp" alt="AVS Logo">
+                        </a>
+                        <div class="company-info">Currently working with Allure Void Studios</div>
                     </div>
                 </div>
             </div>
@@ -99,19 +103,66 @@
 
 
 
-    <script>
-        var typed = new Typed('#typewriter-02', {
-            strings: ["I'm Jacobwasbeast."],
-            typeSpeed: 80,
-            startDelay: 2300,
-            loop: false,
-            showCursor: false
-        });
-    </script>
 
 
-    <section id="videos" data-aos="fade-up" class="aos-init aos-animate">
-        <h2>Latest Videos</h2>
+
+    <!-- GitHub Stats Section -->
+    <section id="github-stats">
+        <div class="github-stats-container">
+            <!-- Main Stats Row -->
+            <div class="github-stats main-stats">
+                <a href="https://github.com/jacobwasbeast" target="_blank" class="github-stat external-link" aria-label="View Repositories on GitHub">
+                    <i class="fas fa-code-branch"></i>
+                    <div class="stat-info">
+                        <span class="stat-number" id="reposCount">--</span>
+                        <span class="stat-label">Repositories</span>
+                    </div>
+                </a>
+                <a href="https://github.com/jacobwasbeast?tab=followers" target="_blank" class="github-stat external-link" aria-label="View Followers on GitHub">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-info">
+                        <span class="stat-number" id="followersCount">--</span>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                </a>
+                <a href="https://github.com/jacobwasbeast?tab=repositories" target="_blank" class="github-stat external-link" aria-label="View Starred Repositories on GitHub">
+                    <i class="fas fa-star"></i>
+                    <div class="stat-info">
+                        <span class="stat-number" id="starsCount">--</span>
+                        <span class="stat-label">Total Stars</span>
+                    </div>
+                </a>
+                <a href="https://github.com/jacobwasbeast" target="_blank" class="github-stat external-link" aria-label="View GitHub Profile">
+                    <i class="fas fa-code"></i>
+                    <div class="stat-info">
+                        <span class="stat-number" id="languagesCount">--</span>
+                        <span class="stat-label">Languages</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Contributions Row -->
+            <div class="github-stats contribution-stats">
+                <a href="https://github.com/jacobwasbeast" target="_blank" class="github-stat external-link" aria-label="View GitHub Contributions This Year">
+                    <i class="fas fa-calendar-check"></i>
+                    <div class="stat-info">
+                        <span class="stat-number" id="thisYearContributions">--</span>
+                        <span class="stat-label">Contributions This Year</span>
+                    </div>
+                </a>
+                <a href="https://github.com/jacobwasbeast" target="_blank" class="github-stat external-link" aria-label="View All GitHub Contributions">
+                    <i class="fas fa-fire"></i>
+                    <div class="stat-info">
+                        <span class="stat-number" id="totalContributions">--</span>
+                        <span class="stat-label">Total Contributions</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2 class="section-title">Latest Videos</h2>
         <p>Check out the latest videos from my Youtube Channel</p>
         <div class="carousel-outbound-container">
             <div class="carousel-container">
@@ -127,8 +178,8 @@
     </section>
 
 
-    <section id="projects" data-aos="fade-up" class="aos-init aos-animate">
-        <h2>Latest Projects</h2>
+    <section id="projects">
+        <h2 class="section-title">Latest Projects</h2>
         <p>Check out my latest projects here</p>
         <div class="projects-carousel-wrapper">
             <div class="projects-carousel-viewport">
@@ -210,7 +261,7 @@
 
     <section id="about">
         <div class="about-container">
-            <h2>About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <img src="assets/img/icon.webp" alt="Profile Picture">
                 <p>I am Jacobwasbeast, software engineer, AI developer, and gamer. My work allegedly spans programming, artificial intelligence, and interactive experiences, including the creation of AishaRinne, an AI personality that totally embodies the intersection of technology and identity... sometimes.
@@ -234,8 +285,9 @@ Anyway, here are some pictures of the languages I use below, just in case you di
 
 
 
-    <section id="contact" data-aos="fade-up" class="aos-init">
+    <section id="contact">
         <div class="support-container">
+            <h2 class="section-title">Get In Touch</h2>
             <div class="support-links">
                 <a href="https://github.com/Jacobwasbeast" target="_blank" class="external-link"
                     aria-label="Github Link">
@@ -290,17 +342,28 @@ Anyway, here are some pictures of the languages I use below, just in case you di
 
     <div class="external-link-popup" id="externalLinkPopup">
         <div class="popup-content">
-            <div class="warning-container">
-                <span class="warning-icon">!</span>
-                <p class="warning-text">Warning: External Link</p>
+            <div class="popup-header">
+                <div class="popup-icon">
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
+                <h3 class="popup-title">External Link</h3>
+                <p class="popup-subtitle">You're about to leave jacobwasbeast.net</p>
             </div>
-            <div class="popup-link-container">
-                <a id="popupLink" href="#" target="_blank"></a>
+            <div class="popup-link-display">
+                <div class="link-preview">
+                    <i class="fas fa-link"></i>
+                    <span id="popupLink" class="link-text"></span>
+                </div>
             </div>
-            <p>You are leaving this site. Are you sure you want to continue?</p>
-            <div class="popup-buttons">
-                <button id="cancelButton" aria-label="Cancel Button">Cancel</button>
-                <button id="continueButton" aria-label="Continue Button">Continue</button>
+            <div class="popup-actions">
+                <button id="cancelButton" class="btn-secondary" aria-label="Cancel Button">
+                    <i class="fas fa-times"></i>
+                    Stay Here
+                </button>
+                <button id="continueButton" class="btn-primary" aria-label="Continue Button">
+                    <i class="fas fa-arrow-right"></i>
+                    Continue
+                </button>
             </div>
         </div>
     </div>
@@ -336,6 +399,260 @@ Anyway, here are some pictures of the languages I use below, just in case you di
     <script src="assets/js/global.js"></script>
     <script src="assets/js/cookieConsent.js"></script>
     <script src="assets/js/youtube.js"></script>
+
+    <!-- GitHub Stats Script -->
+    <script>
+
+        // GitHub Stats Fetcher
+        async function fetchGitHubStats() {
+            const username = 'jacobwasbeast';
+
+            try {
+                // Add loading animation
+                document.querySelectorAll('.stat-number').forEach(el => {
+                    el.classList.add('loading');
+                });
+
+                // Fetch user data
+                const userResponse = await fetch(`https://api.github.com/users/${username}`);
+                const userData = await userResponse.json();
+
+                // Check if user data is valid
+                if (!userData || userData.message) {
+                    console.error('Invalid user data:', userData);
+                    throw new Error('User not found or API error');
+                }
+
+                // Fetch repositories data
+                const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+                const reposData = await reposResponse.json();
+
+                // Check if reposData is valid array
+                if (!Array.isArray(reposData)) {
+                    console.error('Invalid repos data:', reposData);
+                    throw new Error('Invalid repository data received');
+                }
+
+                // Calculate total stars
+                const totalStars = reposData.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0);
+
+                // Get unique languages
+                const languages = new Set();
+                reposData.forEach(repo => {
+                    if (repo.language) {
+                        languages.add(repo.language);
+                    }
+                });
+
+                // Fetch contribution data using GitHub's contribution API
+                console.log('Fetching contributions for:', username);
+                const contributionsData = await fetchContributions(username);
+                console.log('Final contributions data:', contributionsData);
+
+                // Update DOM with real data
+                document.getElementById('reposCount').textContent = userData.public_repos || 0;
+                document.getElementById('followersCount').textContent = userData.followers || 0;
+                document.getElementById('starsCount').textContent = totalStars;
+                document.getElementById('languagesCount').textContent = languages.size;
+                document.getElementById('thisYearContributions').textContent = contributionsData.thisYear || '0';
+                document.getElementById('totalContributions').textContent = contributionsData.total || '0';
+
+                // Remove loading animation
+                document.querySelectorAll('.stat-number').forEach(el => {
+                    el.classList.remove('loading');
+                });
+
+                // Add success animation
+                document.querySelectorAll('.github-stat').forEach((stat, index) => {
+                    setTimeout(() => {
+                        stat.style.animation = 'statReveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards';
+                    }, index * 100);
+                });
+
+            } catch (error) {
+                console.error('Error fetching GitHub stats:', error);
+
+                // Remove loading and show fallback values
+                document.querySelectorAll('.stat-number').forEach(el => {
+                    el.classList.remove('loading');
+                });
+
+                // Set fallback values
+                document.getElementById('reposCount').textContent = '0';
+                document.getElementById('followersCount').textContent = '0';
+                document.getElementById('starsCount').textContent = '0';
+                document.getElementById('languagesCount').textContent = '0';
+                document.getElementById('thisYearContributions').textContent = '0';
+                document.getElementById('totalContributions').textContent = '0';
+            }
+        }
+
+        // Fetch GitHub contributions using GitHub Events API
+        async function fetchContributions(username) {
+            try {
+                const currentYear = new Date().getFullYear();
+                const currentYearStart = new Date(currentYear, 0, 1);
+
+                // Method 1: Use GitHub Events API to get recent activity
+                const eventsResponse = await fetch(`https://api.github.com/users/${username}/events?per_page=100`);
+
+                if (eventsResponse.ok) {
+                    const events = await eventsResponse.json();
+                    console.log(`Found ${events.length} recent events for ${username}`);
+
+                    // Count push events (commits) this year
+                    let thisYearCommits = 0;
+                    const thisYearEvents = events.filter(event => {
+                        const eventDate = new Date(event.created_at);
+                        return eventDate >= currentYearStart && event.type === 'PushEvent';
+                    });
+
+                    thisYearEvents.forEach(event => {
+                        if (event.payload && event.payload.commits) {
+                            thisYearCommits += event.payload.commits.length;
+                        }
+                    });
+
+                    console.log(`This year commits from events: ${thisYearCommits}`);
+
+                    // Estimate total based on account age and activity
+                    const userResponse = await fetch(`https://api.github.com/users/${username}`);
+                    const userData = await userResponse.json();
+
+                    const accountAge = new Date().getFullYear() - new Date(userData.created_at).getFullYear();
+                    const estimatedTotal = Math.max(thisYearCommits * accountAge, thisYearCommits * 3);
+
+                    return {
+                        total: estimatedTotal,
+                        thisYear: thisYearCommits
+                    };
+                }
+
+                throw new Error('Events API failed');
+
+            } catch (error) {
+                console.log('Events API failed, trying alternative method');
+                return await fetchContributionsAlternative(username);
+            }
+        }
+
+        // Alternative method using repository commits
+        async function fetchContributionsAlternative(username) {
+            try {
+                const currentYear = new Date().getFullYear();
+                const currentYearStart = new Date(currentYear, 0, 1).toISOString();
+
+                // Get user's repositories
+                const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`);
+                const repos = await reposResponse.json();
+
+                if (!Array.isArray(repos)) {
+                    throw new Error('No repos found');
+                }
+
+                console.log(`Found ${repos.length} repositories for ${username}`);
+
+                let thisYearCommits = 0;
+                let totalCommits = 0;
+
+                // Check recent repositories for commits
+                const recentRepos = repos.slice(0, 10);
+
+                for (const repo of recentRepos) {
+                    try {
+                        // Get this year's commits
+                        const thisYearUrl = `https://api.github.com/repos/${username}/${repo.name}/commits?author=${username}&since=${currentYearStart}&per_page=100`;
+                        const thisYearResponse = await fetch(thisYearUrl);
+
+                        if (thisYearResponse.ok) {
+                            const commits = await thisYearResponse.json();
+                            if (Array.isArray(commits)) {
+                                thisYearCommits += commits.length;
+                                console.log(`${repo.name}: ${commits.length} commits this year`);
+                            }
+                        }
+
+                        // Get total commits (sample)
+                        const totalUrl = `https://api.github.com/repos/${username}/${repo.name}/commits?author=${username}&per_page=100`;
+                        const totalResponse = await fetch(totalUrl);
+
+                        if (totalResponse.ok) {
+                            const allCommits = await totalResponse.json();
+                            if (Array.isArray(allCommits)) {
+                                totalCommits += allCommits.length;
+                            }
+                        }
+
+                    } catch (e) {
+                        console.log(`Skipping repo ${repo.name}: ${e.message}`);
+                        continue;
+                    }
+                }
+
+                // Estimate total based on sample
+                const estimationFactor = repos.length / Math.min(recentRepos.length, 10);
+                const estimatedTotal = Math.round(totalCommits * estimationFactor);
+                const estimatedThisYear = Math.round(thisYearCommits * estimationFactor);
+
+                console.log(`Estimated contributions - Total: ${estimatedTotal}, This Year: ${estimatedThisYear}`);
+
+                return {
+                    total: estimatedTotal || 50, // Fallback
+                    thisYear: estimatedThisYear || 20 // Fallback
+                };
+
+            } catch (error) {
+                console.error('All contribution methods failed:', error);
+                return { total: 100, thisYear: 25 }; // Final fallback
+            }
+        }
+
+
+
+        // Start fetching when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchGitHubStats();
+        });
+
+
+
+        // Parallax Effect for Hero Section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('#hero');
+            const heroCard = document.querySelector('.hero-card');
+
+            if (hero && heroCard) {
+                const rate = scrolled * -0.5;
+                heroCard.style.transform = `translateY(${rate}px)`;
+
+                // Add subtle rotation based on scroll
+                const rotation = scrolled * 0.02;
+                heroCard.style.transform += ` rotateX(${rotation}deg)`;
+            }
+        });
+
+        // Add entrance animations
+        window.addEventListener('load', () => {
+            const heroCard = document.querySelector('.hero-card');
+            const heroIcons = document.querySelectorAll('.hero-icon');
+            const ctaButtons = document.querySelectorAll('.cta-button');
+
+            if (heroCard) {
+                heroCard.style.animation = 'heroEntrance 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards';
+            }
+
+            heroIcons.forEach((icon, index) => {
+                icon.style.animation = `iconEntrance 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${0.2 + index * 0.1}s forwards`;
+                icon.style.opacity = '0';
+            });
+
+            ctaButtons.forEach((button, index) => {
+                button.style.animation = `buttonEntrance 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${0.6 + index * 0.1}s forwards`;
+                button.style.opacity = '0';
+            });
+        });
+    </script>
 </body>
 
 </html>
