@@ -642,14 +642,10 @@ nav ul li a:hover {
 }
 
 .stat-number {
-  color: var(--text-on-dark);
+  color: #4DD0E1;
   font-weight: 800;
   font-size: 1.5rem;
   line-height: 1;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .stat-label {
@@ -2123,20 +2119,12 @@ footer {
 .footer-container .social-icons a {
   color: #B0B0B0;
   font-size: 1.25rem;
-  padding: 0.75rem;
-  border-radius: 50%;
+  padding: 0.5rem;
   transition: all 0.3s ease;
-  background: linear-gradient(135deg, #1C1C1C 0%, #2E2E2E 100%);
-  border: 1px solid rgba(245, 245, 245, 0.1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .footer-container .social-icons a:hover {
-  background: linear-gradient(135deg, #4DD0E1 0%, #00E5FF 100%);
-  color: #121212;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4), 0 0 12px rgba(77, 208, 225, 0.3);
-  border-color: rgba(77, 208, 225, 0.6);
+  color: #4DD0E1;
 }
 
 .sitemap-link {
